@@ -20,7 +20,7 @@ int test_word_lengths(char* path, int expected[10]) {
 }
 
 static const char* test_kandr_word_lengths() {
-    char* path = "13-test-inputs/normal.txt";
+    char* path = "test-inputs/13/normal.txt";
     const char* fail_msg = "FAILURE: test_kandr_word_lengths";
     int expected[10] = { 0, 0, 4, 2, 3, 0, 0, 0, 0, 0 };
 
@@ -30,7 +30,7 @@ static const char* test_kandr_word_lengths() {
 }
 
 static const char* test_kandr_word_lengths__extra_whitespace() {
-    char* path = "13-test-inputs/whitespace.txt";
+    char* path = "test-inputs/13/whitespace.txt";
     const char* fail_msg = "FAILURE: test_kandr_word_lengths__extra_whitespace";
     int expected[10] = { 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 };
 
@@ -40,7 +40,7 @@ static const char* test_kandr_word_lengths__extra_whitespace() {
 }
 
 static const char* test_kandr_word_lengths__long_words() {
-    char* path = "13-test-inputs/long.txt";
+    char* path = "test-inputs/13/long.txt";
     const char* fail_msg = "FAILURE: test_kandr_word_lengths__long_words";
     int expected[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 2 };
 
@@ -75,7 +75,7 @@ static const char* test_kandr_build_histogram() {
     int* counts = build_counts(counts_arr);
 
     char* histo = build_histogram(counts, 10);
-    FILE* expected = fopen("13-test-inputs/histo_normal.txt", "r");
+    FILE* expected = fopen("test-inputs/13/histo_normal.txt", "r");
 
     const char* fail_msg = "FAILURE: test_kandr_build_histogram";
     mu_assert(fail_msg, string_equals_file(histo, expected));

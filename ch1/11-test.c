@@ -5,7 +5,7 @@
 int tests_run = 0;
 
 static const char* test_kandr_wc() {
-    FILE *fp = fopen("11-test-inputs/normal.txt", "r");
+    FILE *fp = fopen("test-inputs/11/normal.txt", "r");
 
     int nl, nw, nc;
     kandr_wc(fp, &nl, &nw, &nc);
@@ -19,7 +19,7 @@ static const char* test_kandr_wc() {
 }
 
 static const char* test_kandr_wc_newlines() {
-    FILE *fp = fopen("11-test-inputs/newlines.txt", "r");
+    FILE *fp = fopen("test-inputs/11/newlines.txt", "r");
 
     int nl, nw, nc;
     kandr_wc(fp, &nl, &nw, &nc);
@@ -33,7 +33,7 @@ static const char* test_kandr_wc_newlines() {
 }
 
 static const char* test_kandr_wc_whitespace() {
-    FILE *fp = fopen("11-test-inputs/whitespace.txt", "r");
+    FILE *fp = fopen("test-inputs/11/whitespace.txt", "r");
 
     int nl, nw, nc;
     kandr_wc(fp, &nl, &nw, &nc);
