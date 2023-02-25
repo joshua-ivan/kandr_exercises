@@ -9,8 +9,19 @@ kandr-01-11-main: kandr-01-11
 	gcc -Wall -c 11-main.c
 	gcc -o 11-main 11.o 11-main.o
 
+kandr-01-13:
+	gcc -Wall -c 13.c
+
+kandr-01-13-test: kandr-01-13
+	gcc -Wall -c 13-test.c
+	gcc -o 13-test 13.o 13-test.o
+
+kandr-01-13-main: kandr-01-13
+	gcc -Wall -c 13-main.c
+	gcc -o 13-main 13.o 13-main.o
+
 clean:
 	rm -f ./*.o
-	rm -f 11-test
-	rm -f 11-main
+	rm -f *-test
+	rm -f *-main
 
