@@ -31,6 +31,18 @@ kandr-01-14-main: kandr-01-14
 	gcc -Wall -c 14-main.c
 	gcc -o 14-main 14.o 14-main.o
 
+kandr-01-16:
+	gcc -Wall -c 16.c
+
+kandr-01-16-test: kandr-01-16
+	gcc -Wall -c 16-test.c
+	gcc -o 16-test 16.o 16-test.o
+	./16-test
+
+kandr-01-16-main: kandr-01-16
+	gcc -Wall -c 16-main.c
+	gcc -o 16-main 16.o 16-main.o
+
 clean:
 	rm -f ./*.o
 	rm -f *-test
